@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html>
-<body>
-<h1>WebRTC Test</h1>
-<ul>
-	<li><a href="p2p-videochat">p2p-videochat</a></li>
-	<li><a href="p2p-textchat">p2p-textchat</a></li>
-	<li><a href="p2p-broadcast">p2p-broadcast</a></li>
-	<li><a href="fullmesh-videochat">fullmesh-videochat</a></li>
-	<li><a href="fullmesh-textchat">fullmesh-textchat</a></li>
-	<li><a href="sfu-videochat">sfu-videochat</a></li>
-	<li><a href="sfu-textchat">sfu-textchat</a></li>
-</ul>
-</body>
+    <head lang="ja">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <title>SkyWay Handson</title>
+        <link rel="stylesheet" href="../shared/style.css">
+    </head>
+    <body>
+        <div class="videos-container">
+            <video id="js-local-video" autoplay muted="true"></video>
+            <video id="js-remote-video" autoplay muted="true"></video>
+        </div>
+        <div class="controller-container">
+            <p>Your id: <span id="js-local-id">...</span></p>
+            <input type="text" placeholder="Call peer id..." id="js-remote-id">
+            <button id="js-call-trigger">Call</button>
+            <p>Currently in call with <span id="js-connected-id">...</span></p>
+            <button id="js-close-trigger">End call</button>
+        </div>
+
+        <script type="text/javascript" src="https://cdn.webrtc.ecl.ntt.com/skyway-latest.js"></script>
+        <script type="text/javascript" src="../shared/key.js"></script>
+        <script type="text/javascript" src="./script.js"></script>
+    </body>
 </html>
