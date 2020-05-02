@@ -10,13 +10,13 @@ const Peer = window.Peer;
     const closeTrigger = document.getElementById('js-close-trigger');
 
     const localStream = await navigator.mediaDevices.getUserMedia({
+        video: true,
         audio: true,
-        video: { width:{min: 320, max: 320}, height:{min: 240, max: 240}}
     });
     localVideo.srcObject = localStream;
 
     const peer = new Peer({
-        key: 'window.__SKYWAY_KEY__',
+        key: window.__SKYWAY_KEY__,
         debug: 3,
     });
 
